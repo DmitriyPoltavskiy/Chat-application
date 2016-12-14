@@ -19,11 +19,16 @@
 
 		<div class="chat">
 			<header class="chat-header">
-				<h2>
+				<h2 ng-if="!chat.author">
 					{{ chat.author.displayName }}
 				</h2>
-				<button ng-if="!chat.author" class="button button-login" ng-click="chat.login()">Login</button>
-				<button ng-if="chat.author" class="button button-logout" ng-click="chat.logout()">Logout</button>
+				<!-- <div class="chat-log"> -->
+					<button ng-if="!chat.author" class="button button-login" ng-click="chat.login()">LoginG</button>
+					<button ng-if="!chat.author" class="button button-login" ng-click="chat.loginF()">LoginF</button>
+					<button ng-if="!chat.author" class="button button-login" ng-click="chat.loginT()">LoginT</button>
+					<button ng-if="!chat.author" class="button button-login" ng-click="chat.loginG()">LoginGit</button>
+					<button ng-if="chat.author" class="button button-logout" ng-click="chat.logout()">Logout</button>
+				<!-- </div> -->
 			</header>
 
 			<div class="chat-body">
