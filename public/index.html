@@ -4,16 +4,51 @@
 	<meta charset="UTF-8">
 	<title>Chat Application</title>
 
+	<link rel="stylesheet" href="css/vendor.min.css">
+
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
 
 	<section class="chat-page" ng-controller="chatCtrl as chat">
-		<h1>{{ chat.test }}</h1>
+
+		<div class="chat">
+			<header class="chat-header">
+				<h2>
+					{{ chat.author.displayName }}
+				</h2>
+				<button ng-if="!chat.author" class="button button-login" ng-click="chat.login()">Login</button>
+				<button ng-if="chat.author" class="button button-logout" ng-click="chat.logout()">Logout</button>
+			</header>
+
+			<div class="chat-body">
+				<ul>
+					<li ng-repeat="message in chat.shownMessages" class="chat-message" ng-class="{ 'chat-message-mine': message.authorMessage == chat.author.displayName }">
+						<div class="author-inform">
+							<img ng-src="{{ message.authorPhoto }}" alt="Photo person">
+							<h3>
+								{{ message.authorMessage }}
+							</h3>
+						</div>
+						<p>
+							{{ message.text }}
+							<!-- <br> -->
+							<!-- {{ message.time }} -->
+						</p>
+					</li>
+				</ul>
+			</div>
+
+			<footer class="chat-footer">
+				<textarea send-directive="chat.sendMessage()" rows="3" ng-model="chat.newMessage" class="chat-footer-message"></textarea>
+				<button class="button button-send" ng-click="chat.sendMessage()">Send</button>
+			</footer>
+		</div>
+
 	</section>
 
-<script src="js/vendor.min.js"></script>
+	<script src="js/vendor.min.js"></script>
 
-<script src="js/main.min.js"></script>
+	<script src="js/main.min.js"></script>
 </body>
 </html>

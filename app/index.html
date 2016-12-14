@@ -2,7 +2,8 @@
 <html lang="en" ng-app="chatApp">
 <head>
 	<meta charset="UTF-8">
-	<title>Chat Application</title>
+	<link rel="icon" type="image/png" href="images/cat.png" />
+	<title>Chat-Cat:3</title>
 
 	<!-- build:css css/vendor.min.css -->
 	<link rel="stylesheet" href="libs/normalize-css/normalize.css">
@@ -19,18 +20,25 @@
 		<div class="chat">
 			<header class="chat-header">
 				<h2>
-					Author Name
+					{{ chat.author.displayName }}
 				</h2>
-				<button class="button button-green">Login</button>
+				<button ng-if="!chat.author" class="button button-login" ng-click="chat.login()">Login</button>
+				<button ng-if="chat.author" class="button button-logout" ng-click="chat.logout()">Logout</button>
 			</header>
 
 			<div class="chat-body">
 				<ul>
-					<li ng-repeat="message in chat.shownMessages">
-						<!-- <img src="#" alt=""> -->
-						<h3>Message author</h3>
+					<li ng-repeat="message in chat.shownMessages" class="chat-message" ng-class="{ 'chat-message-mine': message.authorMessage == chat.author.displayName }">
+						<div class="author-inform">
+							<img ng-src="{{ message.authorPhoto }}" alt="Photo person">
+							<h3>
+								{{ message.authorMessage }}
+							</h3>
+						</div>
 						<p>
 							{{ message.text }}
+							<!-- <br> -->
+							<!-- {{ message.time }} -->
 						</p>
 					</li>
 				</ul>
@@ -38,7 +46,7 @@
 
 			<footer class="chat-footer">
 				<textarea send-directive="chat.sendMessage()" rows="3" ng-model="chat.newMessage" class="chat-footer-message"></textarea>
-				<button class="button button-blue" ng-click="chat.sendMessage()">Send</button>
+				<button class="button button-send" ng-click="chat.sendMessage()">Send</button>
 			</footer>
 		</div>
 
