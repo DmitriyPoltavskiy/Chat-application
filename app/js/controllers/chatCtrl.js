@@ -1,9 +1,14 @@
-function chatCtrl() {
+function chatCtrl(ChatServise) {
 	var vm = this;
 
-	vm.test = "some text";
+	vm.sendMessage = function() {
+		var message = {
+			text: vm.newMessage
+		}
+		ChatService.sendMessage(message);
+	}
 }
 
 
-angular.module('chatApp')
-.controller("chatCtrl", [chatCtrl]);
+angular.module("chatApp")
+.controller("chatCtrl", ["ChatService", chatCtrl]);

@@ -33,61 +33,12 @@
 							Lorem ipsum dolor sit amet, consectetur.
 						</p>
 					</li>
-					<li>
-						<!-- <img src="#" alt=""> -->
-						<h3>Message author</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur.
-						</p>
-					</li>
-					<li>
-						<!-- <img src="#" alt=""> -->
-						<h3>Message author</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur.
-						</p>
-					</li>
-					<li>
-						<!-- <img src="#" alt=""> -->
-						<h3>Message author</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur.
-						</p>
-					</li>
-					<li>
-						<!-- <img src="#" alt=""> -->
-						<h3>Message author</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur.
-						</p>
-					</li>
-					<li>
-						<!-- <img src="#" alt=""> -->
-						<h3>Message author</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur.
-						</p>
-					</li>
-					<li>
-						<!-- <img src="#" alt=""> -->
-						<h3>Message author</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur.
-						</p>
-					</li>
-					<li>
-						<!-- <img src="#" alt=""> -->
-						<h3>Message author</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur.
-						</p>
-					</li>
 				</ul>
 			</div>
 
 			<footer class="chat-footer">
-				<textarea rows="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, maxime?</textarea>
-				<button class="button button-blue">Send</button>
+				<textarea rows="3" ng-model="chat.newMessage">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, maxime?</textarea>
+				<button class="button button-blue" ng-click="chat.sendMessage()">Send</button>
 			</footer>
 		</div>
 
@@ -96,11 +47,13 @@
 	<!-- build:js js/vendor.min.js -->
 	<script type="text/javascript" src="libs/angular/angular.min.js"></script>
 	<script type="text/javascript" src="libs/firebase/firebase.js"></script>
+	<script type="text/javascript" src="libs/angularfire/dist/angularfire.min.js"></script>
 	<!-- endbuild -->
 
 	<!-- build:js js/main.min.js -->
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/controllers/chatCtrl.js"></script>
+	<script type="text/javascript" src="js/services/chatCervice.js"></script>
 	<!-- endbuild -->
 </body>
 </html>
