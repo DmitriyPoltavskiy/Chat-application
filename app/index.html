@@ -4,6 +4,10 @@
 	<meta charset="UTF-8">
 	<title>Chat Application</title>
 
+	<!-- build:css css/vendor.min.css -->
+	<link rel="stylesheet" href="libs/normalize-css/normalize.css">
+	<!-- endbuild -->
+
 	<!-- build:css css/main.min.css -->
 	<link rel="stylesheet" href="css/main.css">
 	<!-- endbuild -->
@@ -13,33 +17,78 @@
 	<section class="chat-page" ng-controller="chatCtrl as chat">
 
 		<div class="chat">
-			<div class="chat-header">
-				<div class="chat-header__text">
+			<header class="chat-header">
+				<h2>
 					Author Name
-				</div>
-				<div class="chat-heder__button">
-					<button class="button button-green">Login</button>
-				</div>
-			</div>
+				</h2>
+				<button class="button button-green">Login</button>
+			</header>
 
 			<div class="chat-body">
-				<ul class="chat-body__messages">
-					<li class="message">
+				<ul>
+					<li>
 						<!-- <img src="#" alt=""> -->
-						<span class="message__author">Message author</span>
-						<div class="message__text">
+						<h3>Message author</h3>
+						<p>
 							Lorem ipsum dolor sit amet, consectetur.
-						</div>
+						</p>
+					</li>
+					<li>
+						<!-- <img src="#" alt=""> -->
+						<h3>Message author</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur.
+						</p>
+					</li>
+					<li>
+						<!-- <img src="#" alt=""> -->
+						<h3>Message author</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur.
+						</p>
+					</li>
+					<li>
+						<!-- <img src="#" alt=""> -->
+						<h3>Message author</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur.
+						</p>
+					</li>
+					<li>
+						<!-- <img src="#" alt=""> -->
+						<h3>Message author</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur.
+						</p>
+					</li>
+					<li>
+						<!-- <img src="#" alt=""> -->
+						<h3>Message author</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur.
+						</p>
+					</li>
+					<li>
+						<!-- <img src="#" alt=""> -->
+						<h3>Message author</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur.
+						</p>
+					</li>
+					<li>
+						<!-- <img src="#" alt=""> -->
+						<h3>Message author</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur.
+						</p>
 					</li>
 				</ul>
 			</div>
 
-			<div class="chat-footer">
-				<textarea rows="5" class="chat-footer__text">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, maxime?
-				</textarea>
-				<button class="chat-footer__button">Send</button>
-			</div>
+			<footer class="chat-footer">
+				<textarea rows="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, maxime?</textarea>
+				<button class="button button-blue">Send</button>
+			</footer>
 		</div>
 
 	</section>
