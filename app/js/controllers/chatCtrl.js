@@ -15,9 +15,12 @@ function chatCtrl(ChatService) {
 		if (vm.newMessage != "") {
 			ChatService.sendMessage(message); // Вызываем метод сервиса
 			vm.newMessage = ""; // Очищаем textarea после отправки
+			
+			$(".chat-footer-message").removeClass("absentText");
 		}
 		else {
 			$(".chat-footer-message").focus();
+			$(".chat-footer-message").addClass("absentText");
 		}
 	}
 }
