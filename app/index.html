@@ -26,18 +26,18 @@
 
 			<div class="chat-body">
 				<ul>
-					<li>
+					<li ng-repeat="message in chat.shownMessages">
 						<!-- <img src="#" alt=""> -->
 						<h3>Message author</h3>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur.
+							{{ message.text }}
 						</p>
 					</li>
 				</ul>
 			</div>
 
 			<footer class="chat-footer">
-				<textarea rows="3" ng-model="chat.newMessage">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, maxime?</textarea>
+				<textarea rows="3" ng-model="chat.newMessage"></textarea>
 				<button class="button button-blue" ng-click="chat.sendMessage()">Send</button>
 			</footer>
 		</div>

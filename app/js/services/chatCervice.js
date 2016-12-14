@@ -14,8 +14,12 @@ function chatService($firebaseArray) {
 		chat.getMessages().$add(message);
 	}
 
+	chat.limitMessages = function() {
+		return $firebaseArray(messagesRef.limitToLast(20));
+	}
+
 	return chat;
 }
 
 angular.module("chatApp")
-.factory("ChatServise", ["$firebaseArray", chatService])
+.factory("ChatService", ["$firebaseArray", chatService])
