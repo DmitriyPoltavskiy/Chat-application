@@ -95,6 +95,15 @@
 				h3 {
 					margin: 0;
 					margin-right: 5px;
+
+					@media (max-width: 768px) {
+						font-size: 24px;
+					}
+				}
+
+				@media (max-width: 768px) {
+					line-height: 43px;	
+					margin: auto;
 				}
 
 				a {
@@ -102,7 +111,7 @@
 					width: 25px;
 					margin: 0 3px;
 					border-radius: 50%;
-					background-color: #5BDE0A;
+					// background-color: #5BDE0A;
 					text-align: center;
 					line-height: 25px;
 					color: #fff;
@@ -115,6 +124,18 @@
 					&.twitter {
 						background-color: #78CBEF;
 					}
+					&.github {
+						background-color: #FFF1E5;
+						color: #000;
+					}
+					@media (max-width: 768px) {
+						height: 35px;
+						width: 35px;
+						margin: 0 5px;
+						line-height: 35px;
+						font-size: 20px;
+					}
+
 				}
 			}
 		}
@@ -208,7 +229,7 @@
 				position: fixed;
 				bottom: 0;
 				width: calc(100% - 60px);
-				background-color: #eee;
+				background-color: #fafafa;
 			}
 			/////////////
 			

@@ -77,13 +77,19 @@
         .chat-page .chat .chat-header .chat-log h3 {
           margin: 0;
           margin-right: 5px; }
+          @media (max-width: 768px) {
+            .chat-page .chat .chat-header .chat-log h3 {
+              font-size: 24px; } }
+        @media (max-width: 768px) {
+          .chat-page .chat .chat-header .chat-log {
+            line-height: 43px;
+            margin: auto; } }
         .chat-page .chat .chat-header .chat-log a {
           height: 25px;
           width: 25px;
           margin: 0 3px;
           -webkit-border-radius: 50%;
                   border-radius: 50%;
-          background-color: #5BDE0A;
           text-align: center;
           line-height: 25px;
           color: #fff; }
@@ -93,6 +99,16 @@
             background-color: #D6492F; }
           .chat-page .chat .chat-header .chat-log a.twitter {
             background-color: #78CBEF; }
+          .chat-page .chat .chat-header .chat-log a.github {
+            background-color: #FFF1E5;
+            color: #000; }
+          @media (max-width: 768px) {
+            .chat-page .chat .chat-header .chat-log a {
+              height: 35px;
+              width: 35px;
+              margin: 0 5px;
+              line-height: 35px;
+              font-size: 20px; } }
     .chat-page .chat .chat-body {
       height: 40vh;
       padding: 20px 30px;
@@ -174,7 +190,7 @@
           bottom: 0;
           width: -webkit-calc(100% - 60px);
           width: calc(100% - 60px);
-          background-color: #eee; } }
+          background-color: #fafafa; } }
       .chat-page .chat .chat-footer textarea {
         width: 100%;
         margin-right: 30px;
