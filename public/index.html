@@ -5,6 +5,7 @@
 	<link rel="icon" type="image/png" href="images/cat.png" />
 	<title>Chat-Cat:3</title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/vendor.min.css">
 
 	<link rel="stylesheet" href="css/main.min.css">
@@ -15,10 +16,22 @@
 
 		<div class="chat">
 			<header class="chat-header">
-				<h2>
+				<h2 ng-if="chat.author">
 					{{ chat.author.displayName }}
 				</h2>
-				<button ng-if="!chat.author" class="button button-login" ng-click="chat.login()">Login</button>
+				<div class="chat-log" ng-if="!chat.author">
+					<h3>Login with:</h3>
+				
+					<a href="#" ng-click="chat.login()" class="google">
+						<i class="fa fa-google" aria-hidden="true"></i>
+					</a>
+					<a href="#" ng-click="chat.loginT()" class="twitter">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+					<a href="#" ng-click="chat.loginF()" class="facebook">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+				</div>
 				<button ng-if="chat.author" class="button button-logout" ng-click="chat.logout()">Logout</button>
 			</header>
 
