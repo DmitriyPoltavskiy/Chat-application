@@ -39,6 +39,10 @@ function chatCtrl(ChatService, $firebaseAuth) {
 		}
 	}
 
+	vm.deleteMessage = function() {
+		ChatService.deleteMessage();
+	}
+
 	vm.login = function() {
 		auth.$signInWithPopup("google");
 	}

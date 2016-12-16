@@ -14,6 +14,14 @@ function chatService($firebaseArray) {
 		chat.getMessages().$add(message);
 	}
 
+	chat.deleteMessage = function() {
+		var list = $firebaseArray(messagesRef);
+		var item = list[2];
+		list.$remove(item).then(function() {
+			messagesRef.key === item.$id;
+		});
+	}
+
 	chat.limitMessages = function() {
 		return $firebaseArray(messagesRef.limitToLast(20));
 	}

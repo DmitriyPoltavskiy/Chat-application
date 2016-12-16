@@ -42,7 +42,7 @@
 			</header>
 
 			<div class="chat-body">
-				
+
 				<ul>
 					<li ng-repeat="message in chat.shownMessages" class="chat-message" ng-class="{ 'chat-message-mine': message.authorMessage == chat.author.displayName }">
 						<div class="author-inform">
@@ -50,6 +50,9 @@
 							<h3>
 								{{ message.authorMessage }}
 							</h3>
+							<a href="#">
+								<i class="fa fa-times" aria-hidden="true" ng-click="chat.deleteMessage()"></i>
+							</a>
 						</div>
 						<p>
 							{{ message.text }}
