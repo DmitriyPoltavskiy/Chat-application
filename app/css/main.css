@@ -46,19 +46,15 @@
       .chat-page .chat .chat-header h2 {
         margin: 10px 0;
         font-size: 20px; }
-        @media (max-width: 500px) {
+        @media (max-width: 768px) {
           .chat-page .chat .chat-header h2 {
             font-size: 16px; } }
       @media (max-width: 768px) {
         .chat-page .chat .chat-header {
           position: fixed;
-          width: -webkit-calc(100% - 60px);
-          width: calc(100% - 60px);
-          background-color: #fafafa; } }
-      @media (max-width: 500px) {
-        .chat-page .chat .chat-header {
           width: -webkit-calc(100% - 40px);
           width: calc(100% - 40px);
+          background-color: #fafafa;
           padding: 20px 20px; } }
       .chat-page .chat .chat-header .chat-log {
         display: -webkit-box;
@@ -117,16 +113,11 @@
       overflow-x: hidden; }
       @media (max-width: 768px) {
         .chat-page .chat .chat-body {
-          height: -webkit-calc(100vh - 260px);
-          height: calc(100vh - 260px);
+          height: -webkit-calc(100vh - 212px);
+          height: calc(100vh - 212px);
           padding: 20px 10px;
-          margin-top: 103px;
+          margin-top: 80px;
           background-image: url("../images/backgroundWithOpacity.png"); } }
-      @media (max-width: 500px) {
-        .chat-page .chat .chat-body {
-          height: -webkit-calc(100vh - 237px);
-          height: calc(100vh - 237px);
-          margin-top: 80px; } }
       .chat-page .chat .chat-body ul {
         margin: 0;
         padding: 0;
@@ -139,6 +130,8 @@
           -webkit-border-radius: 10px;
                   border-radius: 10px;
           background-color: rgba(225, 245, 254, 0.7); }
+          .chat-page .chat .chat-body ul .chat-message:last-child {
+            margin-bottom: 0; }
           @media (max-width: 768px) {
             .chat-page .chat .chat-body ul .chat-message {
               padding: 15px 20px;
@@ -212,6 +205,9 @@
           border-color: rgba(244, 67, 54, 0.7);
           -webkit-box-shadow: 0 1px 10px rgba(244, 67, 54, 0.5);
                   box-shadow: 0 1px 10px rgba(244, 67, 54, 0.5); }
+        @media (max-width: 768px) {
+          .chat-page .chat .chat-footer textarea {
+            height: 30px; } }
 
 ::-webkit-scrollbar-button {
   height: 5px; }
