@@ -18,6 +18,8 @@
 </head>
 <body>
 
+	<div ng-view></div>
+
 	<section class="chat-page" ng-controller="chatCtrl as chat">
 
 		<div class="chat">
@@ -73,6 +75,7 @@
 	<script type="text/javascript" src="libs/angular/angular.min.js"></script>
 	<script type="text/javascript" src="libs/firebase/firebase.js"></script>
 	<script type="text/javascript" src="libs/angularfire/dist/angularfire.min.js"></script>
+	<script type="text/javascript" src="libs/angular-route/angular-route.min.js"></script>
 	<!-- endbuild -->
 
 	<!-- build:js js/main.min.js -->
@@ -80,6 +83,8 @@
 	<script type="text/javascript" src="js/controllers/chatCtrl.js"></script>
 	<script type="text/javascript" src="js/services/chatCervice.js"></script>
 	<script type="text/javascript" src="js/directives/sendDirective.js"></script>
+	<script type="text/javascript" src="js/routing/home.js"></script>
+	<script type="text/javascript" src="js/controllers/homeCtrl.js"></script>
 	<!-- endbuild -->
 </body>
 </html>
