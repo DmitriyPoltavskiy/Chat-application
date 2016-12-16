@@ -99,9 +99,6 @@
             background-color: #D6492F; }
           .chat-page .chat .chat-header .chat-log a.twitter {
             background-color: #78CBEF; }
-          .chat-page .chat .chat-header .chat-log a.github {
-            background-color: #FFF1E5;
-            color: #000; }
           @media (max-width: 768px) {
             .chat-page .chat .chat-header .chat-log a {
               height: 35px;

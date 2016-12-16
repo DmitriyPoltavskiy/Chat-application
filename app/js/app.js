@@ -10,12 +10,20 @@ firebase.initializeApp(config);
 
 angular.module("chatApp", [
 	"firebase",
-	"ngRoute",
-	"chatApp.home"
+	// "chatApp.home",
+	"ngRoute"
 ]).
 config(["$routeProvider", function($routeProvider) {
 	// назначаем представление по умолчанию
-	$routeProvider.otherwise({
+	$routeProvider
+	.otherwise({
 			redirectTo: "/home"
+	})
+	.when("/home", {
+		templateUrl: "home.html",
+		controller: "homeCtrl"
 	});
+}])
+.controller("homeCtrl", [function() {
+
 }]);
