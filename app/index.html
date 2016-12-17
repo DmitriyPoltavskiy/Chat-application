@@ -61,7 +61,7 @@
 			</div>
 
 			<footer class="chat-footer">
-				<textarea send-directive="chat.sendMessage()" rows="3" ng-model="chat.newMessage" class="chat-footer-message"></textarea>
+				<textarea send-directive="chat.sendMessage()" rows="3" ng-model="chat.newMessage" class="chat-footer-message" press-key></textarea>
 				<button class="button button-send" ng-click="chat.sendMessage()">Send</button>
 			</footer>
 		</div>
@@ -73,10 +73,10 @@
 	<script type="text/javascript" src="libs/angular/angular.min.js"></script>
 	<script type="text/javascript" src="libs/firebase/firebase.js"></script>
 	<script type="text/javascript" src="libs/angularfire/dist/angularfire.min.js"></script>
-	<script type="text/javascript" src="libs/scrolltoid/scrolltoid.js"></script>
+	<script type="text/javascript" src="libs/jquery.scrollTo/jquery.scrollTo.min.js"></script>
 	<!-- endbuild -->
 
-	<script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+	<!-- <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script> -->
 
 	<!-- build:js js/main.min.js -->
 	<script type="text/javascript" src="js/app.js"></script>
@@ -84,6 +84,7 @@
 	<script type="text/javascript" src="js/services/chatCervice.js"></script>
 	<script type="text/javascript" src="js/directives/sendDirective.js"></script>
 	<script type="text/javascript" src="js/directives/scrollTo.js"></script>
+	<script type="text/javascript" src="js/directives/pressKey.js"></script>
 	<!-- endbuild -->
 </body>
 </html>
