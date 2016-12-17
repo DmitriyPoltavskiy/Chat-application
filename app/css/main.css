@@ -132,6 +132,8 @@
           background-color: rgba(225, 245, 254, 0.7); }
           .chat-page .chat .chat-body ul .chat-message:last-child {
             margin-bottom: 0; }
+            .chat-page .chat .chat-body ul .chat-message:last-child, .chat-page .chat .chat-body ul .chat-message:last-child x:-moz-any-link {
+              margin-bottom: 20px; }
           @media (max-width: 768px) {
             .chat-page .chat .chat-body ul .chat-message {
               padding: 15px 20px;
