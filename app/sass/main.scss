@@ -119,11 +119,6 @@
 
 			}
 			
-			// @media (max-width: 500px) {
-			// 	height: calc(100vh - 237px);
-			// 	margin-top: 80px;
-			// }
-
 			ul {
 				margin: 0;
 				padding: 0;
@@ -139,6 +134,10 @@
 
 					&:last-child{
 						margin-bottom: 0;
+
+						&, x:-moz-any-link {
+							margin-bottom: 20px;
+						}
 					}
 
 					@media (max-width: 768px) {
