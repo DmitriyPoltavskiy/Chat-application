@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
 	<link rel="icon" type="image/png" href="images/cat.png" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<!-- build:css css/vendor.min.css -->
 	<link rel="stylesheet" href="libs/normalize-css/normalize.css">
 	<!-- endbuild -->
@@ -37,12 +36,12 @@
 					<a href="#" ng-click="chat.loginF()" class="facebook">
 						<i class="fa fa-facebook" aria-hidden="true"></i>
 					</a>
+					
 				</div>
 				<button ng-if="chat.author" class="button button-logout" ng-click="chat.logout()">Logout</button>
 			</header>
 
 			<div class="chat-body" id="scrollHeight">
-				
 				<ul>
 					<li ng-repeat="message in chat.shownMessages" class="chat-message" ng-class="{ 'chat-message-mine': message.authorMessage == chat.author.displayName }">
 						<div class="author-inform">
@@ -75,8 +74,6 @@
 	<script type="text/javascript" src="libs/angularfire/dist/angularfire.min.js"></script>
 	<script type="text/javascript" src="libs/jquery.scrollTo/jquery.scrollTo.min.js"></script>
 	<!-- endbuild -->
-
-	<!-- <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script> -->
 
 	<!-- build:js js/main.min.js -->
 	<script type="text/javascript" src="js/app.js"></script>
