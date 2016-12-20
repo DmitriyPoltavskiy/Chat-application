@@ -5,7 +5,7 @@
 				<h2 ng-if="chat.author">
 					{{ chat.author.displayName }}
 				</h2>
-				<div class="chat-log social-login" ng-if="!chat.author">
+				<div class="chat-log" ng-if="!chat.author">
 					<h3>Login with:</h3>
 				
 					<a href="#" ng-click="chat.login()" class="google">
