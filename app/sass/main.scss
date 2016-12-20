@@ -74,15 +74,25 @@
 					text-align: center;
 					line-height: 25px;
 					color: #fff;
+					transition: all 0.3s;
 
 					&.facebook {
 						background-color: #547BB5;
+						&:hover {
+							background-color: #608dd1;
+						}
 					}
 					&.google {
 						background-color: #D6492F;
+						&:hover {
+							background-color: #ef5032;
+						}
 					}
 					&.twitter {
 						background-color: #78CBEF;
+						&:hover {
+							background-color: #7fd9ff;
+						}
 					}
 					&.github {
 						background-color: #FFF1E5;
@@ -249,6 +259,7 @@
   	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   	outline: none;
 	color: #F5F5F5;
+	transition: all 0.3s;
 
   	&:hover {
   		box-shadow: 0 1px 10px rgba(0,0,0,0.25);
@@ -259,19 +270,20 @@
   	}
 }
 
-.button-login {
-	border: 1px solid #56D109;
-	background-color: #5BDE0A;
-}
-
 .button-send {
-	border: 1px solid #00A5F0;
-	background-color: #00B0FF;
+	border: 1px solid rgba(0, 165, 240, 1);
+	background-color: rgba(0, 176, 255, 1);
+	&:hover {
+		background-color: #00bfff;
+	}
 }
 
 .button-logout {
 	border: 1px solid rgba(244, 67, 54, 1);
 	background-color: rgba(244, 67, 54, 0.9);
+	&:hover {
+		background-color: #fc473a;
+	}
 }
 
 body {
