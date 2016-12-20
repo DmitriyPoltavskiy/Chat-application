@@ -81,7 +81,7 @@ function chatCtrl(ChatService, $firebaseAuth) {
 	}
 
 	auth.$onAuthStateChanged(function(authData) {
-		console.log(authData);
+		console.log("authData: " + authData);
 		vm.author = authData;
 	});
 
