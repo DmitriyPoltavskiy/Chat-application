@@ -98,14 +98,8 @@
               background-color: #ef5032; }
           .chat-page .chat .chat-header .chat-log a.twitter {
             background-color: #78CBEF; }
-<<<<<<< HEAD
-=======
             .chat-page .chat .chat-header .chat-log a.twitter:hover {
               background-color: #7fd9ff; }
-          .chat-page .chat .chat-header .chat-log a.github {
-            background-color: #FFF1E5;
-            color: #000; }
->>>>>>> develop
           @media (max-width: 768px) {
             .chat-page .chat .chat-header .chat-log a {
               height: 35px;

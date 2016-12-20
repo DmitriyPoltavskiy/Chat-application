@@ -117,16 +117,7 @@
 				// margin-top: 80px;
 				background-image: url("../images/backgroundWithOpacity.png");
 			}
-<<<<<<< HEAD
-
-			@media (max-width: 500px) {
-				height: calc(100vh - 237px);
-				margin-top: 80px;
-			}
-
-=======
 			
->>>>>>> develop
 			ul {
 				margin: 0;
 				padding: 0;
@@ -140,8 +131,6 @@
 					border-radius: 10px;
 					background-color: rgba(225, 245, 254, 0.7);
 
-<<<<<<< HEAD
-=======
 					&:last-child{
 						margin-bottom: 0;
 
@@ -150,7 +139,6 @@
 						}
 					}
 
->>>>>>> develop
 					@media (max-width: 768px) {
 						padding: 15px 20px;
 						background-color: rgba(225, 245, 254, 0.95);
@@ -256,10 +244,6 @@
 	width: 6px;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> develop
 .button {
 	padding: 10px 20px;
 	border-radius: 5px;

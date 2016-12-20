@@ -21,10 +21,10 @@
 			<button ng-if="chat.author" class="button button-logout" ng-click="chat.logout()">Logout</button>
 		</header>
 
-		<div class="chat-body">
-			
+		<div class="chat-body" id="scrollHeight">
+
 			<ul>
-				<li ng-repeat="message in chat.shownMessages" class="chat-message" ng-class="{ 'chat-message-mine': message.authorMessage == chat.author.displayName }">
+			<li ng-repeat="message in chat.shownMessages" class="chat-message" ng-class="{ 'chat-message-mine': message.authorMessage == chat.author.displayName }" scroll-to>
 					<div class="author-inform">
 						<img ng-src="{{ message.authorPhoto }}" alt="Photo person">
 						<h3>
