@@ -64,43 +64,6 @@
 					margin: auto;
 				}
 
-				a {
-					height: 25px;
-					width: 25px;
-					margin: 0 3px;
-					border-radius: 50%;
-					text-align: center;
-					line-height: 25px;
-					color: #fff;
-					transition: all 0.3s;
-
-					&.facebook {
-						background-color: #547BB5;
-						&:hover {
-							background-color: #608dd1;
-						}
-					}
-					&.google {
-						background-color: #D6492F;
-						&:hover {
-							background-color: #ef5032;
-						}
-					}
-					&.twitter {
-						background-color: #78CBEF;
-						&:hover {
-							background-color: #7fd9ff;
-						}
-					}
-
-					@media (max-width: 768px) {
-						height: 35px;
-						width: 35px;
-						margin: 0 5px;
-						line-height: 35px;
-						font-size: 20px;
-					}
-				}
 			}
 		}
 
@@ -287,6 +250,43 @@ body {
 
 
 
+.social-login a{
+	height: 25px;
+	width: 25px;
+	margin: 0 3px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 25px;
+	color: #fff;
+	transition: all 0.3s;
+
+	&.facebook {
+		background-color: #547BB5;
+		&:hover {
+			background-color: #608dd1;
+		}
+	}
+	&.google {
+		background-color: #D6492F;
+		&:hover {
+			background-color: #ef5032;
+		}
+	}
+	&.twitter {
+		background-color: #78CBEF;
+		&:hover {
+			background-color: #7fd9ff;
+		}
+	}
+
+	@media (max-width: 768px) {
+		height: 35px;
+		width: 35px;
+		margin: 0 5px;
+		line-height: 35px;
+		font-size: 20px;
+	}
+}
 
 
 

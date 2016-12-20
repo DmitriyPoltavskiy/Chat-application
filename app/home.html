@@ -19,6 +19,18 @@
 			<label class="checkbox">
 				<a href="#"> Sign Up</a>
 			</label>
+			<div class="social-login">
+				
+				<a href="#" ng-click="chat.login()" class="google">
+					<i class="fa fa-google" aria-hidden="true"></i>
+				</a>
+				<a href="#" ng-click="chat.loginT()" class="twitter">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="#" ng-click="chat.loginF()" class="facebook">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+			</div>
 			<button type="button" class="btn btn-lg btn-primary btn-block" ng-click="SignIn($event)">SignIn</button>
 		</form>
 	</div>
