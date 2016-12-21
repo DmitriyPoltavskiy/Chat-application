@@ -1,0 +1,50 @@
+<article class="chat-page" ng-controller="chatCtrl as chat">
+
+		<section class="chat">
+
+			<header class="chat-header">
+				<h2 ng-if="chat.author">
+					{{ chat.author.displayName }}
+				</h2>
+				<div class="chat-log" ng-if="!chat.author">
+					<h3>Login with:</h3>
+				
+					<a href="#" ng-click="chat.login()" class="google">
+						<i class="fa fa-google" aria-hidden="true"></i>
+					</a>
+					<a href="#" ng-click="chat.loginT()" class="twitter">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+					<a href="#" ng-click="chat.loginF()" class="facebook">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+					
+				</div>
+				<button ng-if="chat.author" class="button button-red" ng-click="chat.logout()">Logout</button>
+			</header>
+
+			<div class="chat-body" id="scrollHeight">
+				<ul>
+					<li ng-repeat="message in chat.shownMessages" class="chat-message" ng-class="{ 'chat-message-mine': message.authorMessage == chat.author.displayName }">
+						<div class="author-inform">
+							<img ng-src="{{ message.authorPhoto }}" alt="Photo person">
+							<h3 scroll-to>
+								{{ message.authorMessage }}
+							</h3>
+						</div>
+						<p>
+							{{ message.text }}
+							<!-- <br> -->
+							<!-- {{ message.time }} -->
+						</p>
+					</li>
+				</ul>
+			</div>
+
+			<footer class="chat-footer">
+				<textarea send-directive="chat.sendMessage()" rows="3" ng-model="chat.newMessage" class="chat-footer-message" press-key></textarea>
+				<button class="button button-blue" ng-click="chat.sendMessage()">Send</button>
+			</footer>
+		</section>
+
+	</article>

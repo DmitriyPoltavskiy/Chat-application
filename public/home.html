@@ -1,0 +1,31 @@
+<article class="chat-page home-page">
+
+	<section class="login-page">
+		<h2>Chat cat:3</h2>
+		<form class="form-signIn">
+			<p>
+				<i class="fa fa-envelope-o" aria-hidden="true"></i>
+				<input ng-model="user.email" type="email" placeholder="E-mail" required="required">
+			</p>
+			<p>
+				<i class="fa fa-lock" aria-hidden="true"></i>
+				<input ng-model="user.password" type="password" placeholder="Password" required="required">
+			</p>
+			<button type="button" class="button button-blue" ng-click="SignIn()">Sign In</button>
+			<p class="signUp">
+				<a href="#">or Sign Up</a>
+			</p>
+			<div class="chat-log" ng-controller="chatCtrl as chat">
+				<a href="#" ng-click="chat.login()" class="google">
+					<i class="fa fa-google" aria-hidden="true"></i>
+				</a>
+				<a href="#" ng-click="chat.loginT()" class="twitter">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="#" ng-click="chat.loginF()" class="facebook">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+			</div>
+		</form>
+	</section>
+</article>
