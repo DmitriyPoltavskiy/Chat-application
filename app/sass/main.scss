@@ -1,3 +1,9 @@
+body {
+	font-family: sans-serif;
+	color: #757575;
+}
+
+// Widget chat page
 .chat-page {
 	display: flex;
 	justify-content: space-around;
@@ -42,10 +48,6 @@
 				// width: calc(100% - 40px);
 				background-color: #fafafa;
 				padding: 20px 20px;					
-			}
-
-			
-
 			}
 		}
 
@@ -162,33 +164,10 @@
 				}
 			}
 		}
-	
+	}
 }
 
-::-webkit-scrollbar-button {
-	height: 5px;
-}
-
-::-webkit-scrollbar-track {
-	background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	background-color: rgba(0, 176, 255, 0.4);
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background-color: rgba(0, 176, 255, 0.7);
-}
-
-::-webkit-resizer{}
-
-::-webkit-scrollbar{
-	width: 6px;
-}
-
+// Components
 .button {
 	padding: 10px 20px;
 	border-radius: 5px;
@@ -207,7 +186,7 @@
   	}
 }
 
-.button-send {
+.button-blue {
 	border: 1px solid rgba(0, 165, 240, 1);
 	background-color: rgba(0, 176, 255, 1);
 	&:hover {
@@ -215,7 +194,7 @@
 	}
 }
 
-.button-logout {
+.button-red {
 	border: 1px solid rgba(244, 67, 54, 1);
 	background-color: rgba(244, 67, 54, 0.9);
 	&:hover {
@@ -223,10 +202,7 @@
 	}
 }
 
-body {
-	font-family: sans-serif;
-	color: #757575;
-}
+
 
 .chat-log {
 	display: flex;
@@ -293,10 +269,30 @@ body {
 	}
 }
 
+// Widget home page
 
 
+::-webkit-scrollbar-button {
+	height: 5px;
+}
 
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
 
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background-color: rgba(0, 176, 255, 0.4);
+}
 
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(0, 176, 255, 0.7);
+}
 
+::-webkit-resizer{}
+
+::-webkit-scrollbar{
+	width: 6px;
+}
 

@@ -9,7 +9,7 @@ angular.module("chatApp")
 			var userData;
 
 			auth.$onAuthStateChanged(function(authData) {
-				console.log("authData: " + authData);
+				// console.log("authData: " + authData);
 				userData = authData;
 
 				if (authData != null) {
@@ -18,7 +18,7 @@ angular.module("chatApp")
 				else {
 					window.location.href = '/#!/home';
 				}
-				console.log("is working!");
+				// console.log("is working!");
 			});
 
 		}

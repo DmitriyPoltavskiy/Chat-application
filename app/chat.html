@@ -1,6 +1,7 @@
-<section class="chat-page" ng-controller="chatCtrl as chat">
+<article class="chat-page" ng-controller="chatCtrl as chat">
 
-		<div class="chat">
+		<section class="chat">
+
 			<header class="chat-header">
 				<h2 ng-if="chat.author">
 					{{ chat.author.displayName }}
@@ -19,7 +20,7 @@
 					</a>
 					
 				</div>
-				<button ng-if="chat.author" class="button button-logout" ng-click="chat.logout()">Logout</button>
+				<button ng-if="chat.author" class="button button-red" ng-click="chat.logout()">Logout</button>
 			</header>
 
 			<div class="chat-body" id="scrollHeight">
@@ -42,8 +43,8 @@
 
 			<footer class="chat-footer">
 				<textarea send-directive="chat.sendMessage()" rows="3" ng-model="chat.newMessage" class="chat-footer-message" press-key></textarea>
-				<button class="button button-send" ng-click="chat.sendMessage()">Send</button>
+				<button class="button button-blue" ng-click="chat.sendMessage()">Send</button>
 			</footer>
-		</div>
+		</section>
 
-	</section>
+	</article>
