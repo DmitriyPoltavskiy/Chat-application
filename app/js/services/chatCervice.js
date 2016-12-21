@@ -1,6 +1,7 @@
 function chatService($firebaseArray) {
 
 	var messagesRef = firebase.database().ref().child("messages");
+	// var usersRef = firebase.database().ref().child("user");
 	var chat = {};
 
 	// Создание синхронезированного массива
