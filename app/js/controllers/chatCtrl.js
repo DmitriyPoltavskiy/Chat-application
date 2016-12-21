@@ -18,8 +18,9 @@ function chatCtrl(ChatService, $firebaseAuth) {
 			var message = {
 				authorMessage: vm.author.displayName = vm.author.displayName == null? "New user" : vm.author.displayName,
 				authorId: vm.author.uid,
-				authorPhoto: vm.author.photoURL = vm.author.photoURL == null? "https://pp.vk.me/c637316/v637316077/223f8/ikCaKUp3uJs.jpg" : vm.author.displayName,// 
+				authorPhoto: vm.author.photoURL = vm.author.photoURL == null? "https://pp.vk.me/c637316/v637316077/223f8/ikCaKUp3uJs.jpg" : vm.author.photoURL,// 
 				text: vm.newMessage
+				//authorPhoto: vm.author.photoURL,
 				// time: new Date().getTime()
 			}
 
