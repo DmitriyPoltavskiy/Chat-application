@@ -3,7 +3,7 @@ angular.module("chatApp")
 	"$scope", 
 	"$firebaseAuth",
 	"firebase",
-	"$location",
+	// "$location",
 	function($scope, $firebaseAuth, firebase, $location) {
 
 		$scope.SignIn = function() {
@@ -13,6 +13,9 @@ angular.module("chatApp")
 		
 		console.log("username: " + username);
 		console.log("password: " + password);
+
+		firebase.User.displayName = "her";
+		console.log(firebase.User.displayName);
 
 		firebase.auth().signInWithEmailAndPassword(username, password)
 		.then(function(result) {

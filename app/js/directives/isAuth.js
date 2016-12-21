@@ -1,5 +1,5 @@
 angular.module("chatApp")
-.directive("isLogging", [
+.directive("isAuth", [
 	"$firebaseAuth", 
 	function($firebaseAuth) {
 	return {
@@ -9,7 +9,6 @@ angular.module("chatApp")
 			var userData;
 
 			auth.$onAuthStateChanged(function(authData) {
-				// console.log("authData: " + authData);
 				userData = authData;
 
 				if (authData != null) {
@@ -18,7 +17,6 @@ angular.module("chatApp")
 				else {
 					window.location.href = '/#!/home';
 				}
-				// console.log("is working!");
 			});
 
 		}

@@ -28,8 +28,8 @@ body {
         width: 80%; } }
     @media (max-width: 768px) {
       .chat-page .chat {
-        width: 100%;
         height: 100vh;
+        width: 100%;
         -webkit-border-radius: 0;
                 border-radius: 0; } }
     .chat-page .chat .chat-header {
@@ -55,8 +55,8 @@ body {
             font-size: 16px; } }
       @media (max-width: 768px) {
         .chat-page .chat .chat-header {
-          background-color: #fafafa;
-          padding: 20px 20px; } }
+          padding: 20px 20px;
+          background-color: #fafafa; } }
     .chat-page .chat .chat-body {
       height: 40vh;
       padding: 20px 30px;
@@ -90,8 +90,8 @@ body {
               padding: 15px 20px;
               background-color: rgba(225, 245, 254, 0.95); } }
           .chat-page .chat .chat-body ul .chat-message p {
-            word-wrap: break-word;
-            margin: 0; }
+            margin: 0;
+            word-wrap: break-word; }
             @media (max-width: 768px) {
               .chat-page .chat .chat-body ul .chat-message p {
                 font-size: 14px; } }
@@ -111,9 +111,9 @@ body {
               -webkit-border-radius: 50%;
                       border-radius: 50%; }
             .chat-page .chat .chat-body ul .chat-message .author-inform h3 {
+              margin: 0;
               font-size: 15px;
-              line-height: 26px;
-              margin: 0; }
+              line-height: 26px; }
         .chat-page .chat .chat-body ul .chat-message-mine {
           float: right; }
     .chat-page .chat .chat-footer {
@@ -157,6 +157,108 @@ body {
         @media (max-width: 768px) {
           .chat-page .chat .chat-footer textarea {
             height: 30px; } }
+
+.login-page {
+  width: 40%;
+  padding: 20px 40px 30px;
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: #FAFAFA; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .login-page {
+      width: 60%; } }
+  @media (max-width: 768px) {
+    .login-page {
+      width: 80%;
+      padding: 10px 20px 25px; } }
+  @media (max-width: 568px) {
+    .login-page {
+      padding: 10px 20px 15px; } }
+  .login-page h2 {
+    margin-bottom: 0;
+    font-size: 28px;
+    text-align: center; }
+    @media (max-width: 768px) {
+      .login-page h2 {
+        margin: 15px 0 0px; } }
+    @media (max-width: 568px) {
+      .login-page h2 {
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-size: 22px; } }
+  .login-page form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 15px; }
+    @media (max-width: 768px) {
+      .login-page form {
+        margin-top: 8px; } }
+    @media (max-width: 568px) {
+      .login-page form {
+        margin-top: 0; } }
+    .login-page form p {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 0;
+      margin-top: 20px;
+      font-size: 18px; }
+      @media (max-width: 768px) {
+        .login-page form p {
+          font-size: 14px; } }
+      .login-page form p i {
+        width: 30px;
+        font-size: 22px;
+        text-align: center; }
+      .login-page form p input {
+        padding: 10px;
+        width: 100%;
+        margin-left: 10px;
+        -webkit-border-radius: 8px;
+                border-radius: 8px;
+        border: 1px solid #cecece;
+        background: #fff;
+        outline: none; }
+    .login-page form .chat-log {
+      margin: 10px auto 0; }
+      @media (max-width: 568px) {
+        .login-page form .chat-log {
+          margin: 0 auto; } }
+      .login-page form .chat-log a {
+        height: 30px;
+        width: 30px;
+        margin: 0 10px;
+        font-size: 16px;
+        line-height: 30px; }
+    .login-page form p.signUp {
+      margin: 5px auto 0;
+      text-align: center; }
+      .login-page form p.signUp a {
+        padding: 10px;
+        color: #00b0ff; }
+        .login-page form p.signUp a:hover {
+          text-decoration: none;
+          color: #00bfff; }
+    .login-page form .button {
+      width: 100%;
+      margin-top: 30px; }
+      @media (max-width: 568px) {
+        .login-page form .button {
+          margin-top: 25px; } }
 
 .button {
   padding: 10px 20px;
@@ -208,13 +310,11 @@ body {
     -webkit-border-radius: 50%;
             border-radius: 50%;
     font-size: 18px;
-    text-align: center;
     line-height: 35px;
+    text-align: center;
     color: #fff;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
-    .chat-log a:hover {
-      color: #fff; }
     .chat-log a.facebook {
       background-color: #547BB5; }
       .chat-log a.facebook:hover {
@@ -232,18 +332,11 @@ body {
         height: 35px;
         width: 35px;
         margin: 0 5px;
-        line-height: 35px;
-        font-size: 20px; } }
+        font-size: 20px;
+        line-height: 35px; } }
   .chat-log h3 {
     margin: 0;
     margin-right: 5px; }
-    @media (max-width: 768px) {
-      .chat-log h3 {
-        font-size: 24px; } }
-  @media (max-width: 768px) {
-    .chat-log {
-      line-height: 43px;
-      margin: auto; } }
 
 ::-webkit-scrollbar-button {
   height: 5px; }

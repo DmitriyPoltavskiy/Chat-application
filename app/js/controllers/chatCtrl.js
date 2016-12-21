@@ -16,9 +16,9 @@ function chatCtrl(ChatService, $firebaseAuth) {
 		if(vm.author != null)
 		{
 			var message = {
-				authorMessage: vm.author.displayName,
+				authorMessage: vm.author.displayName = vm.author.displayName == null? "New user" : vm.author.displayName,
 				authorId: vm.author.uid,
-				authorPhoto: vm.author.photoURL,
+				authorPhoto: vm.author.displayName = vm.author.displayName == null? "https://pp.vk.me/c637316/v637316077/223f8/ikCaKUp3uJs.jpg" : vm.author.displayName,// 
 				text: vm.newMessage
 				// time: new Date().getTime()
 			}
@@ -81,12 +81,11 @@ function chatCtrl(ChatService, $firebaseAuth) {
 	}
 
 	auth.$onAuthStateChanged(function(authData) {
-		console.log("authData: " + authData);
+		console.log(authData);
 		vm.author = authData;
 	});
 
 }
-
 
 angular.module("chatApp")
 .controller("chatCtrl", ["ChatService", "$firebaseAuth", chatCtrl]);

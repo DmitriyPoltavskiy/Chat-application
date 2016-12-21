@@ -10,7 +10,6 @@ firebase.initializeApp(config);
 
 angular.module("chatApp", [
 	"firebase",
-	// "chatApp.home",
 	"ngRoute"
 ])
 
@@ -26,7 +25,6 @@ angular.module("chatApp", [
 	})
 	.when("/chat", {
 		templateUrl: "chat.html",
-		// template: "<h1>Hi!</h1>",
 		controller: "chatCtrl"
 	});
 }]);
