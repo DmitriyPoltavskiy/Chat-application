@@ -34,15 +34,16 @@
 						</div>
 						<p>
 							{{ message.text }}
-							<!-- <br> -->
-							<!-- {{ message.time }} -->
+							<time>
+								{{ message.hours }}
+							</time>
 						</p>
 					</li>
 				</ul>
 			</div>
 
 			<footer class="chat-footer">
-				<textarea send-directive="chat.sendMessage()" rows="3" ng-model="chat.newMessage" class="chat-footer-message" press-key></textarea>
+				<textarea send-directive="chat.sendMessage()" rows="3" ng-model="chat.newMessage" class="chat-footer-message" press-key empty-textarea></textarea>
 				<button class="button button-blue" ng-click="chat.sendMessage()">Send</button>
 			</footer>
 		</section>

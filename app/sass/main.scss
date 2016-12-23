@@ -385,6 +385,19 @@ body {
 	// }
 }
 
+// Component time
+.chat-page .chat .chat-body ul .chat-message {
+	position: relative;
+	padding-bottom: 30px;
+}
+time {
+    position: absolute;
+    bottom: 10px;
+    // top: 32px;
+    right: 30px;
+    font-size: 12px;
+    color: #90A4AE;
+}
 
 // Scroll bar
 ::-webkit-scrollbar-button {

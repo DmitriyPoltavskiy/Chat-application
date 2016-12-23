@@ -3,7 +3,6 @@ function chatCtrl(ChatService, $firebaseAuth) {
 	var auth = $firebaseAuth();
 	var providerF = new firebase.auth.FacebookAuthProvider();
 	var providerT = new firebase.auth.TwitterAuthProvider();
-	// var providerG = new firebase.auth.GithubAuthProvider();
 	var providerG = new firebase.auth.GithubAuthProvider();
 
 	// Получаем сообщения с сервера
@@ -15,25 +14,32 @@ function chatCtrl(ChatService, $firebaseAuth) {
 	vm.sendMessage = function() {
 		if(vm.author != null)
 		{
+			// Time
+			var hours = new Date().getHours();
+			var minutes = new Date().getMinutes();
+			var seconds = new Date().getSeconds();
+			var date = new Date().getDate();
+			var month = new Date().getMonth();
+
+
 			var message = {
-				authorMessage: vm.author.displayName = vm.author.displayName == null? "New user" : vm.author.displayName,
+				authorMessage: vm.author.displayName = vm.author.displayName || "New user",
 				authorId: vm.author.uid,
-				authorPhoto: vm.author.photoURL = vm.author.photoURL == null? "https://pp.vk.me/c637316/v637316077/223f8/ikCaKUp3uJs.jpg" : vm.author.photoURL,// 
-				text: vm.newMessage
-				//authorPhoto: vm.author.photoURL,
-				// time: new Date().getTime()
+				authorPhoto: vm.author.photoURL = vm.author.photoURL || "https://pp.vk.me/c637316/v637316077/223f8/ikCaKUp3uJs.jpg",// 
+				text: vm.newMessage,
+				hours: hours + ":" + minutes + ":" + seconds
 			}
 
 			if (vm.newMessage != "") {
 				ChatService.sendMessage(message); // Вызываем метод сервиса
 				vm.newMessage = ""; // Очищаем textarea после отправки
 				
-				$(".chat-footer-message").removeClass("absentText");
+				// $(".chat-footer-message").removeClass("absentText");
 			}
-			else {
-				$(".chat-footer-message").focus();
-				$(".chat-footer-message").addClass("absentText");
-			}
+			// else {
+			// 	$(".chat-footer-message").focus();
+			// 	$(".chat-footer-message").addClass("absentText");
+			// }
 		}
 		else {
 			alert("You are not login!");

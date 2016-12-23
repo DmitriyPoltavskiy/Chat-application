@@ -2,9 +2,9 @@ angular.module("chatApp")
 .directive("pressKey", function() {
 	return {
 		restrict: "A",
-		link: function() {
+		link: function(scope, elements, attrs) {
 			$(document).keydown(function() {
-				$(".chat-footer-message").focus();
+				elements.focus();
 			});
 		}
 	}
